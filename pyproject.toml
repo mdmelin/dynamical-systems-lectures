@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamical-systems-lectures"
+authors = [
+  {name="Max Melin", email="mmelin@ucla.edu"},
+]
+description = "Generic functions for fitting behavioral data"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = ['jupyter', 'ipykernel', 'numpy', 'cython', 'seaborn', 'matplotlib']
+dynamic = ["version"]
+
+
+[tool.setuptools.packages.find]
+where = ["."] 
+include = ["helpers"]
+namespaces = false  # disable PEP 420 namespaces
